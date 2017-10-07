@@ -83,7 +83,7 @@ class Main extends PluginBase {
         $this->saveDefaultConfig();
         $this->logger = Server::getInstance()->getLogger();
         if($this->getServer()->getPluginManager()->getPlugin("ServerAuth")){
-    		if(ServerAuth::getAPI()->getAPIVersion() == "1.1.1"){
+    		if(ServerAuth::getAPI()->getAPIVersion() == "3.0.0"){
     			$this->logger->info($this->translateColors("&", Main::PREFIX . "&aPlugin Enabled!"));
     			$this->getCommand("chatlogin")->setExecutor(new Commands\Commands($this));
     			$this->getServer()->getPluginManager()->registerEvents(new EventListener($this), $this);
